@@ -217,6 +217,109 @@ body {
   height: 100%;
 }
 
+/* JOBS BOARD SECTION */
+
+.jobs-board {
+  margin-top: 60px;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: min-content 1fr;
+  gap: 20px;
+}
+
+/* FILTER SECTION */
+
+.filters {
+  grid-column: 1 / 2;
+  height: fit-content;
+  background-color: var(--background);
+  border: 3px solid var(--foreground);
+  border-radius: 10px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(7, min-content);
+  gap: 16px;
+  padding: 20px;
+}
+
+.slider-container {
+  color: var(--foreground);
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.slider-container__label {
+  grid-column: 1 / -1;
+  font-weight: 700;
+}
+
+.slider-container__slider {
+  grid-column: 1 / -1;
+}
+
+.slider-container__salary {
+  display: inline-block;
+  font-weight: 700;
+}
+
+.slider-container__salary--2 {
+  text-align: end;
+}
+
+.checkboxes-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content 1fr 1fr 1fr;
+  gap: 10px 20px;
+}
+
+.checkboxes-container__title {
+  grid-column: 1 / -1;
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+.toggle-container {
+  color: var(--foreground);
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* JOB-POSTINGS */
+
+.job-postings {
+  border: 3px solid var(--foreground);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.job-postings ol {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.job-postings p {
+  margin: 10px 0;
+}
+
+.job-postings ul li {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.job-postings h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 /* FOOTER */
 
 .footer {
@@ -315,6 +418,16 @@ body {
   border-radius: 6px;
 }
 
+.btn-primary {
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+.btn-secondary {
+  color: var(--background);
+  background-color: var(--foreground);
+}
+
 .btn-sm {
   max-width: fit-content;
 }
@@ -326,6 +439,123 @@ body {
 .btn-outline:hover {
   background-color: var(--foreground);
   color: var(--background);
+}
+
+/* CHECKBOX */
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: var(--foreground); /* Change to your desired color */
+}
+
+.checkbox__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: var(--foreground); /* Change to your desired color */
+}
+
+.checkbox__input:checked ~ .checkbox__checkmark:after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 30%;
+  top: 10%;
+  width: 5px;
+  height: 10px;
+  border: solid var(--background);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* SLIDER */
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 16px;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider::-webkit-slider-runnable-track {
+  height: 100%;
+  background: var(--foreground);
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  background-color: var(--background);
+  border-radius: 100%;
+  box-shadow: -31rem 0 0 30rem var(--foreground);
+}
+
+/* TOGGLE */
+
+.toggle-container__text {
+  align-self: center;
+}
+
+.toggle__control {
+  transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  width: 60px;
+  height: 30px;
+  display: block;
+  border-radius: 30px;
+  background-color: var(--background);
+  border: 2px solid var(--foreground);
+  position: relative;
+}
+
+.toggle__control:after {
+  transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-color: var(--foreground);
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+}
+
+.toggle__input {
+  display: none;
+}
+
+.toggle__input:checked + .toggle__control {
+  border-color: var(--foreground);
+  background-color: var(--foreground);
+}
+
+.toggle__input:checked + .toggle__control:after {
+  background-color: var(--background);
+  left: 30px;
 }
 
 /* DIVIDER */
@@ -377,6 +607,11 @@ body {
     font-size: small;
     max-width: 300px;
   }
+
+  .jobs-board {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 480px) {
@@ -399,6 +634,11 @@ body {
   .paragraph {
     font-size: small;
     max-width: 300px;
+  }
+
+  .jobs-board {
+    display: flex;
+    flex-direction: column;
   }
 }
 
