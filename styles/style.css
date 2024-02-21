@@ -326,7 +326,7 @@ body {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid var(--border);
+  border: 3px solid var(--foreground);
   border-radius: 10px;
 }
 
@@ -343,7 +343,16 @@ body {
   padding: 8px;
   margin: 5px 0 15px;
   border: 1px solid var(--border);
-  border-radius: 5px;
+  border-radius: 10px;
+}
+
+.apply-form input[type="text"]:focus,
+.apply-form input[type="email"]:focus,
+.apply-form input[type="tel"]:focus,
+.apply-form input[type="date"]:focus,
+.apply-form select:focus {
+  outline: none;
+  border: 2px solid var(--foreground);
 }
 
 .apply-form input[type="checkbox"] {
@@ -477,11 +486,13 @@ body {
   color: var(--foreground);
   padding: 6px 15px;
   border-radius: 6px;
+  border: none;
 }
 
 .btn-primary {
   color: var(--foreground);
   background-color: var(--background);
+  border: 2px solid var(--foreground);
 }
 
 .btn-secondary {
