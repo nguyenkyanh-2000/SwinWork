@@ -292,6 +292,16 @@ body {
   color: var(--background);
 }
 
+/* APPLY PAGE */
+
+.apply-form {
+  padding: 0 60px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
 /* DIVIDER */
 
 .divider {

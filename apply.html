@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--Head-->
+  <!--Head-->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,192 +12,310 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
-<!--Body-->
-<body>
-  <header class="header">
-    <div class="header__heading-container">
-      <h1 class="header__heading">
-        Job application form
-      </h1>
-    </div>
-  </header>
+  <!--Body-->
+  <body class="apply-page">
+    <nav class="navbar">
+      <a class="logo" href="index.html">SwinWORK</a>
+      <div class="navbar__link-container">
+        <a href="#" class="navbar__link">Services</a>
+        <a href="#" class="navbar__link">Career</a>
+        <a href="#" class="navbar__link">About</a>
+      </div>
+      <div class="navbar__btn-container">
+        <a href="#" class="btn btn-outline">Login</a>
+        <svg
+          width="15"
+          height="15"
+          viewBox="0 0 15 15"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="more"
+        >
+          <path
+            d="M2.5 4C2.22386 4 2 4.22386 2 4.5C2 4.77614 2.22386 5 2.5 5H12.5C12.7761 5 13 4.77614 13 4.5C13 4.22386 12.7761 4 12.5 4H2.5ZM2 7.5C2 7.22386 2.22386 7 2.5 7H12.5C12.7761 7 13 7.22386 13 7.5C13 7.77614 12.7761 8 12.5 8H2.5C2.22386 8 2 7.77614 2 7.5ZM2 10.5C2 10.2239 2.22386 10 2.5 10H12.5C12.7761 10 13 10.2239 13 10.5C13 10.7761 12.7761 11 12.5 11H2.5C2.22386 11 2 10.7761 2 10.5Z"
+            fill="currentColor"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </div>
+    </nav>
 
-  <div class="divider"></div>
-  
-  <!--Form-->
-  <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+    <header class="header">
+      <div class="header__heading-container">
+        <h1 class="header__heading">Application form</h1>
+      </div>
+    </header>
 
-  <!--Job preference number-->
-  <label for="jpre">Job preference number</label><br>
-  <input type="text" id="jpre" name="jpre" maxlength="5" pattern="[a-zA-Z0-9]+" required><br><br>
+    <nav class="navbar-solid">
+      <a class="logo" href="index.html">SwinWORK</a>
+      <div class="navbar__link-container">
+        <a href="#" class="navbar__link">Services</a>
+        <a href="#" class="navbar__link">Career</a>
+        <a href="#" class="navbar__link">About</a>
+      </div>
 
-  <!--First name-->
-  <label for="fname">First name</label><br>
-  <input type="text" id="fname" name="fname" maxlength="20" required><br><br>
+      <div class="navbar__btn-container">
+        <a href="#" class="btn btn-outline">Login</a>
+        <svg
+          width="15"
+          height="15"
+          viewBox="0 0 15 15"
+          fill="none"
+          class="more"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2.5 4C2.22386 4 2 4.22386 2 4.5C2 4.77614 2.22386 5 2.5 5H12.5C12.7761 5 13 4.77614 13 4.5C13 4.22386 12.7761 4 12.5 4H2.5ZM2 7.5C2 7.22386 2.22386 7 2.5 7H12.5C12.7761 7 13 7.22386 13 7.5C13 7.77614 12.7761 8 12.5 8H2.5C2.22386 8 2 7.77614 2 7.5ZM2 10.5C2 10.2239 2.22386 10 2.5 10H12.5C12.7761 10 13 10.2239 13 10.5C13 10.7761 12.7761 11 12.5 11H2.5C2.22386 11 2 10.7761 2 10.5Z"
+            fill="currentColor"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </div>
+    </nav>
 
-  <!--Last name-->
-  <label for="lname">Last name</label><br>
-  <input type="text" id="lname" name="lname" maxlength="20" required><br><br>
+    <div class="divider"></div>
 
-  <!--Date of birth-->
-  <label for="bday">Date of birth</label><br>
-  <input type="date" id="bday" name="bday" required><br><br>
+    <!--Form-->
+    <section class="apply-form">
+      <form
+        method="post"
+        action="https://mercury.swin.edu.au/it000000/formtest.php"
+      >
+        <!--Job preference number-->
+        <label for="jpre">Job preference number</label><br />
+        <input
+          type="text"
+          id="jpre"
+          name="jpre"
+          maxlength="5"
+          pattern="[a-zA-Z0-9]+"
+          required
+        /><br /><br />
 
-  <!--Gender-->
-  <!--The requirements are using grouped and legend so you shouldn't change it into other type but better style it-->
-  <fieldset>
-    <legend>Gender</legend>
-    <input type="radio" id="male" name="gender" value="Male" required>
-    <label for="male">Male</label><br>
-    <input type="radio" id="female" name="gender" value="Female" required>
-    <label for="female">Female</label><br>
-  </fieldset>
-  <br>
-  
-  <!--Street address-->
-  <label for="st-address">Street address</label><br>
-  <input type="text" id="st-address" name="st-address" maxlength="40" required><br><br>
+        <!--First name-->
+        <label for="fname">First name</label><br />
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          maxlength="20"
+          required
+        /><br /><br />
 
-  <!--Suburb/town-->
-  <label for="su-to">Suburb/town</label><br>
-  <input type="text" id="su-to" name="su-to" maxlength="40" required><br><br>
+        <!--Last name-->
+        <label for="lname">Last name</label><br />
+        <input
+          type="text"
+          id="lname"
+          name="lname"
+          maxlength="20"
+          required
+        /><br /><br />
 
-  <!--State-->
-  <label for="state">Choose your State</label><br>
-  <select name="states" id="states" required>
-    <option value="VIC">VIC</option>
-    <option value="NSW">NSW</option>
-    <option value="QLD">QLD</option>
-    <option value="NT">NT</option>
-    <option value="WA">WA</option>
-    <option value="SA">SA</option>
-    <option value="TAS">TAS</option>
-    <option value="ACT">ACT</option>
-  </select>
-  <br><br>
+        <!--Date of birth-->
+        <label for="bday">Date of birth</label><br />
+        <input type="date" id="bday" name="bday" required /><br /><br />
 
-  <!--Postcode-->
-  <label for="postcode">Postcode</label><br>
-  <input type="text" name="postcode" maxlength="4" id="postcode" pattern="\d{4}" required/><br><br>
+        <!--Gender-->
+        <!--The requirements are using grouped and legend so you shouldn't change it into other type but better style it-->
+        <fieldset>
+          <legend>Gender</legend>
+          <input type="radio" id="male" name="gender" value="Male" required />
+          <label for="male">Male</label><br />
+          <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="Female"
+            required
+          />
+          <label for="female">Female</label><br />
+        </fieldset>
+        <br />
 
-  <!--Email-->
-  <label for="email">Email</label><br>
-  <input type="email" id="email" pattern=".+@gmail\.com" required /><br><br>
+        <!--Street address-->
+        <label for="st-address">Street address</label><br />
+        <input
+          type="text"
+          id="st-address"
+          name="st-address"
+          maxlength="40"
+          required
+        /><br /><br />
 
-  <!--Phone number-->
-  <label for="phone">Phone number</label><br>
-  <input type="tel" id="phone" name="phone" maxlength="12" required><br><br>
+        <!--Suburb/town-->
+        <label for="su-to">Suburb/town</label><br />
+        <input
+          type="text"
+          id="su-to"
+          name="su-to"
+          maxlength="40"
+          required
+        /><br /><br />
 
-  <!--Skill-->
-  <label for="phone">Skill</label><br>
-  <input type="checkbox" id="skill1" name="skill1" value="Skill">
-  <label for="skill1">Problem solving</label><br>
-  <input type="checkbox" id="skill2" name="skill2" value="Skill">
-  <label for="skill2">Deep learning</label><br>
-  <input type="checkbox" id="skill3" name="skill3" value="Skill">
-  <label for="skill3">Critical thinking</label><br>
-  <input type="checkbox" id="skill4" name="skill4" value="Skill">
-  <label for="skill4">Data engineering</label><br>
-  <input type="checkbox" id="skill5" name="skill5" value="Skill">
-  <label for="skill5">Machine learning</label><br>
-  <input type="checkbox" id="skill6" name="skill6" value="Skill">
-  <label for="skill6">Communication</label><br>
-  <input type="checkbox" id="skill7" name="skill7" value="Skill">
-  <label for="skill7">Big data analytics</label><br>
-  <input type="checkbox" id="skill8" name="skill8" value="Skill">
-  <label for="skill8">Neural network architectures</label><br>
-  <input type="checkbox" id="skill9" name="skill9" value="Skill">
-  <label for="skill9">Natural language processing</label><br>
-  <input type="checkbox" id="skill10" name="skill10" value="Skill">
-  <label for="skill10">Cloud knowledge</label><br>
-  <input type="checkbox" id="skill11" name="skill11" value="Skill">
-  <label for="skill11">Teamwork</label><br>
-  <input type="checkbox" id="skill12" name="skill12" value="Skill">
-  <label for="skill12">Data visualization</label><br>
-  <input type="checkbox" id="skill13" name="skill13" value="Skill">
-  <label for="skill13">Linear algebra and Statistics</label><br>
-  <input type="checkbox" id="skill14" name="skill14" value="Skill">
-  <label for="skill14">Other</label><br>
-  <input type="text" id="otherskill" name="otherskill" class="resizedTextbox" placeholder="Enter your other skill here"><br><br>
-  
-  <!--Apply button-->
-  <!--The apply button require input not hyperlink or other type-->
-  <input type="submit" value="Apply">
-  </form>
-</body>
+        <!--State-->
+        <label for="state">Choose your State</label><br />
+        <select name="states" id="states" required>
+          <option value="VIC">VIC</option>
+          <option value="NSW">NSW</option>
+          <option value="QLD">QLD</option>
+          <option value="NT">NT</option>
+          <option value="WA">WA</option>
+          <option value="SA">SA</option>
+          <option value="TAS">TAS</option>
+          <option value="ACT">ACT</option>
+        </select>
+        <br /><br />
 
-<!--Footer-->
-<div class="divider-sm"></div>
+        <!--Postcode-->
+        <label for="postcode">Postcode</label><br />
+        <input
+          type="text"
+          name="postcode"
+          maxlength="4"
+          id="postcode"
+          pattern="\d{4}"
+          required
+        /><br /><br />
 
-<footer class="footer">
-  <div class="footer__addr">
-    <h1 class="logo">SwinWORK</h1>
-  </div>
+        <!--Email-->
+        <label for="email">Email</label><br />
+        <input
+          type="email"
+          id="email"
+          pattern=".+@gmail\.com"
+          required
+        /><br /><br />
 
-  <ul class="footer__nav">
-    <li class="nav__item">
-      <h2 class="nav__title">Media</h2>
-      <ul class="nav__ul">
-        <li>
-          <a href="#">Online</a>
+        <!--Phone number-->
+        <label for="phone">Phone number</label><br />
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          maxlength="12"
+          required
+        /><br /><br />
+
+        <!--Skill-->
+        <label for="phone">Skill</label><br />
+        <input type="checkbox" id="skill1" name="skill1" value="Skill" />
+        <label for="skill1">Problem solving</label><br />
+        <input type="checkbox" id="skill2" name="skill2" value="Skill" />
+        <label for="skill2">Deep learning</label><br />
+        <input type="checkbox" id="skill3" name="skill3" value="Skill" />
+        <label for="skill3">Critical thinking</label><br />
+        <input type="checkbox" id="skill4" name="skill4" value="Skill" />
+        <label for="skill4">Data engineering</label><br />
+        <input type="checkbox" id="skill5" name="skill5" value="Skill" />
+        <label for="skill5">Machine learning</label><br />
+        <input type="checkbox" id="skill6" name="skill6" value="Skill" />
+        <label for="skill6">Communication</label><br />
+        <input type="checkbox" id="skill7" name="skill7" value="Skill" />
+        <label for="skill7">Big data analytics</label><br />
+        <input type="checkbox" id="skill8" name="skill8" value="Skill" />
+        <label for="skill8">Neural network architectures</label><br />
+        <input type="checkbox" id="skill9" name="skill9" value="Skill" />
+        <label for="skill9">Natural language processing</label><br />
+        <input type="checkbox" id="skill10" name="skill10" value="Skill" />
+        <label for="skill10">Cloud knowledge</label><br />
+        <input type="checkbox" id="skill11" name="skill11" value="Skill" />
+        <label for="skill11">Teamwork</label><br />
+        <input type="checkbox" id="skill12" name="skill12" value="Skill" />
+        <label for="skill12">Data visualization</label><br />
+        <input type="checkbox" id="skill13" name="skill13" value="Skill" />
+        <label for="skill13">Linear algebra and Statistics</label><br />
+        <input type="checkbox" id="skill14" name="skill14" value="Skill" />
+        <label for="skill14">Other</label><br />
+        <input
+          type="text"
+          id="otherskill"
+          name="otherskill"
+          class="resizedTextbox"
+          placeholder="Enter your other skill here"
+        /><br /><br />
+
+        <!--Apply button-->
+        <!--The apply button require input not hyperlink or other type-->
+        <input type="submit" value="Apply" />
+      </form>
+    </section>
+
+    <!--Footer-->
+    <div class="divider-sm"></div>
+
+    <footer class="footer">
+      <div class="footer__addr">
+        <h1 class="logo">SwinWORK</h1>
+      </div>
+
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Media</h2>
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Online</a>
+            </li>
+            <li>
+              <a href="#">Print</a>
+            </li>
+            <li>
+              <a href="#">Alternative Ads</a>
+            </li>
+          </ul>
         </li>
-        <li>
-          <a href="#">Print</a>
+
+        <li class="nav__item nav__item--extra">
+          <h2 class="nav__title">Technology</h2>
+          <ul class="nav__ul nav__ul--extra">
+            <li>
+              <a href="#">Hardware Design</a>
+            </li>
+            <li>
+              <a href="#">Software Design</a>
+            </li>
+            <li>
+              <a href="#">Digital Signage</a>
+            </li>
+            <li>
+              <a href="#">Automation</a>
+            </li>
+            <li>
+              <a href="#">Artificial Intelligence</a>
+            </li>
+            <li>
+              <a href="#">IoT</a>
+            </li>
+          </ul>
         </li>
-        <li>
-          <a href="#">Alternative Ads</a>
+
+        <li class="nav__item">
+          <h2 class="nav__title">Legal</h2>
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#">Terms of Use</a>
+            </li>
+            <li>
+              <a href="#">Sitemap</a>
+            </li>
+          </ul>
         </li>
       </ul>
-    </li>
 
-    <li class="nav__item nav__item--extra">
-      <h2 class="nav__title">Technology</h2>
-      <ul class="nav__ul nav__ul--extra">
-        <li>
-          <a href="#">Hardware Design</a>
-        </li>
-        <li>
-          <a href="#">Software Design</a>
-        </li>
-        <li>
-          <a href="#">Digital Signage</a>
-        </li>
-        <li>
-          <a href="#">Automation</a>
-        </li>
-        <li>
-          <a href="#">Artificial Intelligence</a>
-        </li>
-        <li>
-          <a href="#">IoT</a>
-        </li>
-      </ul>
-    </li>
+      <div class="legal">
+        <p>&copy; 2024 All rights reserved</p>
 
-    <li class="nav__item">
-      <h2 class="nav__title">Legal</h2>
-      <ul class="nav__ul">
-        <li>
-          <a href="#">Privacy Policy</a>
-        </li>
-        <li>
-          <a href="#">Terms of Use</a>
-        </li>
-        <li>
-          <a href="#">Sitemap</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-
-  <div class="legal">
-    <p>&copy; 2024 All rights reserved</p>
-  
-  <div class="legal__links">
-      <span>Made by Nguyen Duy An</span>
-    </div>
-  </div>
-</footer>
+        <div class="legal__links">
+          <span>Made by Nguyen Duy An</span>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
