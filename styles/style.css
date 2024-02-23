@@ -648,7 +648,7 @@ select:focus {
 
 .slider::-webkit-slider-runnable-track {
   height: 100%;
-  background: var(--foreground);
+  background: var(--muted-foreground);
 }
 
 .slider::-webkit-slider-thumb {
