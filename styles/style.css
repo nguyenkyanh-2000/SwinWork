@@ -118,7 +118,30 @@ body {
   flex-direction: column;
   gap: 20px;
 }
+.header3 {
+  position: relative;
+  width: 100%;
+  height: 18vh;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header3__heading {
+  max-width: 400px;
+  line-height: 20px;
+}
+
+.header3__heading-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .navbar-solid {
   position: fixed;
   height: 60px;
