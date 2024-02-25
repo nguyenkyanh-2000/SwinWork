@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--Head-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>SwinWork | Enhancements</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <!--Body-->
+  <body>
+    <nav class="navbar">
+      <a class="logo" href="index.html">SwinWORK</a>
+      <div class="navbar__link-container">
+        <a href="services.html" class="navbar__link">Services</a>
+        <a href="jobs.html" class="navbar__link">Career</a>
+        <a href="about.html" class="navbar__link">About</a>
+      </div>
+      <div class="navbar__btn-container">
+        <a href="login.html" class="btn btn-outline">Login</a>
+
+        <input type="checkbox" class="navigation__checkbox" id="nav-toggle" />
+        <label for="nav-toggle" class="navigation__button">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="services.html" class="navbar__link">Services</a>
+            </li>
+            <li class="navigation__item">
+              <a href="jobs.html" class="navbar__link">Career</a>
+            </li>
+            <li class="navigation__item">
+              <a href="apply.html" class="navbar__link">Apply</a>
+            </li>
+            <li class="navigation__item">
+              <a href="about.html" class="navbar__link">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </nav>
+
+    <header class="header">
+      <div class="header__heading-container">
+        <h1 class="header__heading">Enhancements</h1>
+      </div>
+    </header>
+
+    <nav class="navbar-solid">
+      <a class="logo" href="index.html">SwinWORK</a>
+      <div class="navbar__link-container">
+        <a href="services.html" class="navbar__link">Services</a>
+        <a href="jobs.html" class="navbar__link">Career</a>
+        <a href="about.html" class="navbar__link">About</a>
+      </div>
+      <div class="navbar__btn-container">
+        <a href="login.html" class="btn btn-outline">Login</a>
+
+        <input type="checkbox" class="navigation__checkbox" id="nav-toggle" />
+        <label for="nav-toggle" class="navigation__button">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="services.html" class="navbar__link">Services</a>
+            </li>
+            <li class="navigation__item">
+              <a href="jobs.html" class="navbar__link">Career</a>
+            </li>
+            <li class="navigation__item">
+              <a href="apply.html" class="navbar__link">Apply</a>
+            </li>
+            <li class="navigation__item">
+              <a href="about.html" class="navbar__link">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </nav>
+
+    <div class="divider"></div>
+
+    <!--Enhancements-->
+
+    <section class="enhancements">
+      <section class="job-postings">
+        <ol>
+          <li>
+            <h2>Enhancement 1: Sliding navigation menu.</h2>
+            <h3>What:</h3>
+            <ul>
+              <li>A sliding menu using pure HTML and CSS.</li>
+              <li>Optimized for smaller devices.</li>
+              <li>Has an animated button.</li>
+              <li>Has (animated) hyperlinks to other sites on the website.</li>
+            </ul>
+            <h3>How:</h3>
+            <ul>
+              <li>
+                <p>
+                  "navigation__checkbox": This is a hidden checkbox input
+                  element. Its purpose is to control the state of the navigation
+                  menu. When checked, it indicates that the menu should be open.
+                </p>
+              </li>
+              <li>
+                <p>
+                  "navigation__button": This is a button element that is used to
+                  toggle the navigation menu. It's typically a button that users
+                  can click or tap to open or close the menu.
+                </p>
+              </li>
+              <li>
+                <p>
+                  "navigation__nav": This represents the navigation menu itself.
+                  It's initially hidden (opacity: 0 and width: 0) and positioned
+                  fixed to cover the entire viewport (height: 100vh). When the
+                  checkbox is checked, it transitions to become visible
+                  (opacity: 1) and takes up the full width of the viewport
+                  (width: 100%).
+                </p>
+                <ul>
+                  <li>
+                    <p>
+                      "navigation__list": This is the list of navigation items
+                      within the menu. It's positioned absolutely at the center
+                      of the menu and styled to be centered both horizontally
+                      and vertically.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p>
+                  "navigation__checkbox:checked ~ .navigation__nav": This
+                  selector applies styles to the navigation menu when the
+                  checkbox is checked. It sets the opacity to 1 and the width to
+                  100%, effectively making the menu visible and taking up the
+                  entire viewport.
+                </p>
+              </li>
+              <li>
+                <p>
+                  "navigation__icon": This represents the icon used for the
+                  toggle button. It consists of three horizontal lines (commonly
+                  known as a "hamburger" icon).
+                </p>
+                <ul>
+                  <li>
+                    <p>
+                      "navigation__icon::before": These pseudo-elements create
+                      additional lines to form the hamburger icon. They are
+                      positioned above and below the main icon and styled to
+                      create the desired appearance of the icon.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      "navigation__checkbox:checked + .navigation__button
+                      .navigation__icon": This selector applies styles to the
+                      icon within the toggle button when the checkbox is
+                      checked. It removes the background color of the icon.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      "navigation__checkbox:checked + .navigation__button
+                      .navigation__icon::before": These selectors adjust the
+                      rotation of the pseudo-elements to transform the hamburger
+                      icon into a close icon when the checkbox is checked.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <h3>Where:</h3>
+            <ul>
+              <li>Resize the browser to smaller devices.</li>
+              <li>
+                Click on the hamburger icon on the navigation bar (on all
+                sites).
+              </li>
+              <li>Enjoy!</li>
+            </ul>
+            <div class="divider-sm"></div>
+          </li>
+
+          <li>
+            <h2>Position 2: Data Analyst</h2>
+            <p><strong>Position Reference:</strong> XYZ34</p>
+            <p>
+              <strong>Description:</strong> We are looking for a detail-oriented
+              data analyst to join our analytics team. You will be responsible
+              for collecting, analyzing, and interpreting data to help drive
+              business decisions.
+            </p>
+            <p><strong>Salary Range:</strong> $50,000 - $70,000 per year</p>
+            <p><strong>Reports to:</strong> Head of Analytics</p>
+            <h3>Key Responsibilities:</h3>
+            <ul>
+              <li>Collect and clean data from various sources</li>
+              <li>Analyze data to identify trends and patterns</li>
+              <li>Prepare reports and presentations for stakeholders</li>
+              <li>Develop and maintain data visualization dashboards</li>
+            </ul>
+            <h3>Required Qualifications:</h3>
+            <ul>
+              <li>
+                <strong>Essential:</strong> Proficiency in SQL and data analysis
+                tools
+              </li>
+              <li>
+                <strong>Essential:</strong> Strong analytical and
+                problem-solving skills
+              </li>
+              <li><strong>Preferable:</strong> Experience with Python or R</li>
+              <li>
+                <strong>Preferable:</strong> Bachelor's degree in Statistics,
+                Mathematics, or related field
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+    </section>
+    <!--Footer-->
+    <div class="divider-sm"></div>
+
+    <footer class="footer">
+      <div class="footer__addr">
+        <h1 class="logo">SwinWORK</h1>
+      </div>
+
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Media</h2>
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Online</a>
+            </li>
+            <li>
+              <a href="#">Print</a>
+            </li>
+            <li>
+              <a href="#">Alternative Ads</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav__item nav__item--extra">
+          <h2 class="nav__title">Technology</h2>
+          <ul class="nav__ul nav__ul--extra">
+            <li>
+              <a href="#">Hardware Design</a>
+            </li>
+            <li>
+              <a href="#">Software Design</a>
+            </li>
+            <li>
+              <a href="#">Digital Signage</a>
+            </li>
+            <li>
+              <a href="#">Automation</a>
+            </li>
+            <li>
+              <a href="#">Artificial Intelligence</a>
+            </li>
+            <li>
+              <a href="#">IoT</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav__item">
+          <h2 class="nav__title">Legal</h2>
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#">Terms of Use</a>
+            </li>
+            <li>
+              <a href="enhancements.html">Enhancements</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="legal">
+        <p>&copy; 2024 All rights reserved</p>
+
+        <div class="legal__links">
+          <span>Made by Nguyen Ky Anh & Nguyen Duy An</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

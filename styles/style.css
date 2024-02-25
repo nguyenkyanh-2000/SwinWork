@@ -522,6 +522,11 @@ body {
   font-weight: 800;
 }
 
+/* ENHANCEMENTS */
+.enhancements {
+  padding: 0 60px;
+}
+
 /* FOOTER */
 
 .footer {
@@ -1267,27 +1272,22 @@ select:focus {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  box-shadow:
-  0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
-  0px 6.7px 5.3px rgba(0, 0, 0, 0.028),
-  0px 12.5px 10px rgba(0, 0, 0, 0.035),
-  0px 22.3px 17.9px rgba(0, 0, 0, 0.042),
-  0px 41.8px 33.4px rgba(0, 0, 0, 0.05),
-  0px 100px 80px rgba(0, 0, 0, 0.07);
+  box-shadow: 0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0px 6.7px 5.3px rgba(0, 0, 0, 0.028), 0px 12.5px 10px rgba(0, 0, 0, 0.035),
+    0px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    0px 41.8px 33.4px rgba(0, 0, 0, 0.05), 0px 100px 80px rgba(0, 0, 0, 0.07);
   overflow: hidden;
-  display:inline-block;
-  vertical-align:middle;
+  display: inline-block;
+  vertical-align: middle;
 }
-.profile-img img{
-  width:100%;
+.profile-img img {
+  width: 100%;
 }
 
-div.team-img{
+div.team-img {
   width: 40%;
   background-color: white;
-  box-shadow: 
-  0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
 }
 
