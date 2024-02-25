@@ -203,37 +203,69 @@
           </li>
 
           <li>
-            <h2>Position 2: Data Analyst</h2>
-            <p><strong>Position Reference:</strong> XYZ34</p>
-            <p>
-              <strong>Description:</strong> We are looking for a detail-oriented
-              data analyst to join our analytics team. You will be responsible
-              for collecting, analyzing, and interpreting data to help drive
-              business decisions.
-            </p>
-            <p><strong>Salary Range:</strong> $50,000 - $70,000 per year</p>
-            <p><strong>Reports to:</strong> Head of Analytics</p>
-            <h3>Key Responsibilities:</h3>
+            <h2>Enhancement 2: Timetable</h2>
+            <h3>What:</h3>
             <ul>
-              <li>Collect and clean data from various sources</li>
-              <li>Analyze data to identify trends and patterns</li>
-              <li>Prepare reports and presentations for stakeholders</li>
-              <li>Develop and maintain data visualization dashboards</li>
+              <li>A time table using pure HTML and CSS.</li>
+              <li>Optimized for smaller devices.</li>
             </ul>
-            <h3>Required Qualifications:</h3>
+            <h3>How:</h3>
             <ul>
               <li>
-                <strong>Essential:</strong> Proficiency in SQL and data analysis
-                tools
+                <p>
+                    .timetable: This class is applied to the container element for the timetable.
+                    display: grid;: Sets the display property to grid, indicating that the container will use CSS Grid layout.
+                    grid-template-areas: Defines the layout of the grid areas within the timetable container. It specifies two rows and two columns: an empty cell in the top-left corner, a row for displaying week names, a column for displaying time intervals, and the main content area.
+                    grid-template-columns: Sets the width of the columns in the grid. In this case, it specifies a width of 120px for the week column.
+                    grid-template-rows: Sets the height of the rows in the grid. In this case, it specifies a height of 60px for the time row.
+                    width, padding, height, resize, overflow-x: Various properties for controlling the size, padding, and scrolling behavior of the timetable container.
+                </p>
               </li>
               <li>
-                <strong>Essential:</strong> Strong analytical and
-                problem-solving skills
+                <p>
+                  ".timetable .accent-pink-gradient and .timetable .accent-purple-gradient: These classes are applied to elements within the timetable to give them a gradient background with a transition effect on hover.
+                  display: flex;: Sets the display property to flex, allowing for flexible layout of child elements.
+                  width and height: Sets the dimensions of the elements to 100% of their container.
+                  background: Applies a linear gradient background color.
+                  transition: Defines the transition effect for the box shadow and transform properties, making them animate smoothly over a duration of 0.2 seconds when the element is hovered.
+                  :hover: Specifies the styles to apply when the element is hovered, including a box shadow and a scaling effect.
+                </p>
               </li>
-              <li><strong>Preferable:</strong> Experience with Python or R</li>
               <li>
-                <strong>Preferable:</strong> Bachelor's degree in Statistics,
-                Mathematics, or related field
+                <p>
+                  ".timetable .weekend: This class is applied to elements representing weekends within the timetable and defines their background and text color.
+                </p>
+                <ul>
+                  <li>
+                    <p>
+                      ".timetable .week-names and .timetable .time-interval: These classes are applied to grid areas within the timetable for displaying week names and time intervals, respectively.
+                      grid-area: Specifies which grid area the element occupies within the timetable.
+                      display: grid;: Sets the display property to grid for nested grids.
+                      grid-template-columns and grid-template-rows: Defines the number and size of columns and rows in the nested grids.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p>
+                  ".timetable .content: This class is applied to the main content area of the timetable.
+                  grid-area: Specifies the grid area for the content.
+                  display: grid;: Sets the display property to grid for the content grid.
+                  grid-template-rows and grid-template-columns: Defines the number and size of rows and columns in the content grid.
+                </p>
+              </li>
+              <li>
+                <p>
+                  ".timetable .content > div: This selector targets the div elements within the content area and applies box shadow styles to create borders between cells.
+                </p>
+              </li>
+            </ul>
+            <h3>Where:</h3>
+            <ul>
+              <li>About/Sechedule</li>
+            </br>
+              <li>
+                <a class="btn btn-outline" href="about.html#timetable-hyperlink">Go there</a>
               </li>
             </ul>
           </li>
