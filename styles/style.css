@@ -1295,3 +1295,12 @@ div.container {
   text-align: center;
   padding: 10px 20px;
 }
+
+.confirmation-message {
+  width: 100%;
+  max-width: 900px;
+  margin: 50px auto;
+  font-size: larger;
+  font-weight: bolder;
+  text-align: center;
+}

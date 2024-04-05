@@ -5,9 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Process EOI</title>
+    <link rel="stylesheet" href="./styles/style.css" />
 </head>
 
-<body>
+<body class="apply-page">
+
+    <?php include 'navbar.inc'; ?>
+
+    <header class="header">
+    <div class="header__heading-container">
+    <h1 class="header__heading">Application Confirmation</h1>
+    </div>
+    </header>
+
+     <?php include 'navbar-solid.inc'; ?>
     <?php
 
     require_once ("settings.php");
@@ -114,7 +125,8 @@
 
             if ($conn->query($sql) === TRUE) {
                 $last_id = $conn->insert_id;
-                echo "<p>Expression of Interest submitted successfully. Your EOInumber is: $last_id.</p>";
+                echo "<p class=\"confirmation-message\">Expression of Interest submitted successfully. Your EOInumber is: $last_id.</p>";
+
             } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }
@@ -128,6 +140,9 @@
     }
     ?>
 
+    <div class="divider-sm"></div>
+    <?php include 'footer.inc'; ?>
+    </div>
 </body>
 
 </html>
