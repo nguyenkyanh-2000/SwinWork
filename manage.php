@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="table.css?v=<?php echo time(); ?>">
 <title>HR Database Manager | SwinWORK</title>
 </head>
@@ -46,21 +46,21 @@ if (mysqli_num_rows($result) > 0) {
     $ctr = 0;
     while($row = mysqli_fetch_assoc($result)) {
         echo "<tr>";
-        echo "<td>" ."<input type='number' id='id' name ='id_".$ctr."' value ='" .$row['EOINumber'] ."' </td>";
-        echo "<td>" ."<input type='number' id='jnumber' name ='job_number_".$ctr."' value ='" .$row['job_number'] ."' </td>";
-        echo "<td>" ."<input type='text' id='fname' name ='first_name_".$ctr."' value ='" .$row['first_name'] ."' </td>";
-        echo "<td>" ."<input type='text' id='lname' name ='last_name_".$ctr."' value ='" .$row['last_name'] ."' </td>";
-        echo "<td>" ."<input type='date' id='birth' name ='birthday_".$ctr."' value ='" .$row['birthday'] ."' </td>";
-        echo "<td>" ."<input type='text' id='gender' name ='gender_".$ctr."' value ='" .$row['gender'] ."' </td>";
-        echo "<td>" ."<input type='text' id='street' name ='street_address_".$ctr."' value ='" .$row['street_address'] ."' </td>";
-        echo "<td>" ."<input type='text' id='suburb/town' name ='suburb_town_".$ctr."' value ='" .$row['suburb_town'] ."' </td>";
-        echo "<td>" ."<input type='text' id='state' name ='states_".$ctr."' value ='" .$row['states'] ."' </td>";
-        echo "<td>" ."<input type='number' id='pcode' name ='postcode_".$ctr."' value ='" .$row['postcode'] ."' </td>";
-        echo "<td>" ."<input type='email' id='mail' name ='email_".$ctr."' value ='" .$row['email'] ."' </td>";
-        echo "<td>" ."<input type='phone' id='phonenum' name ='phone_".$ctr."' value ='" .$row['phone'] ."' </td>";
-        echo "<td>" ."<input type='text' id='skill' name ='skills_".$ctr."' value ='" .$row['skills'] ."' </td>";
-        echo "<td>" ."<input type='text' id='oskill' name ='other_skills_".$ctr."' value ='" .$row['other_skills'] ."' </td>";
-        echo "<td>" ."<input type='text' id='status' name ='status_".$ctr."' value ='" .$row['status'] ."' </td>";
+        echo "<td>" ."<input type='number' id='id".$ctr."' name ='id_".$ctr."' value ='" .$row['EOINumber']."'></td>";
+        echo "<td>" ."<input type='number' id='jnumber".$ctr."' name ='job_number_".$ctr."' value ='" .$row['job_number'] ."'></td>";
+        echo "<td>" ."<input type='text' id='fname".$ctr."' name ='first_name_".$ctr."' value ='" .$row['first_name'] ."'></td>";
+        echo "<td>" ."<input type='text' id='lname".$ctr."' name ='last_name_".$ctr."' value ='" .$row['last_name'] ."'></td>";
+        echo "<td>" ."<input type='date' id='birth".$ctr."' name ='birthday_".$ctr."' value ='" .$row['birthday'] ."'></td>";
+        echo "<td>" ."<input type='text' id='gender".$ctr."' name ='gender_".$ctr."' value ='" .$row['gender'] ."'></td>";
+        echo "<td>" ."<input type='text' id='street".$ctr."' name ='street_address_".$ctr."' value ='" .$row['street_address'] ."'></td>";
+        echo "<td>" ."<input type='text' id='suburb/town".$ctr."' name ='suburb_town_".$ctr."' value ='" .$row['suburb_town'] ."'></td>";
+        echo "<td>" ."<input type='text' id='state".$ctr."' name ='states_".$ctr."' value ='" .$row['states'] ."'></td>";
+        echo "<td>" ."<input type='number' id='pcode".$ctr."' name ='postcode_".$ctr."' value ='" .$row['postcode'] ."'></td>";
+        echo "<td>" ."<input type='email' id='mail".$ctr."' name ='email_".$ctr."' value ='" .$row['email'] ."'></td>";
+        echo "<td>" ."<input type='tel' id='phonenum".$ctr."' name ='phone_".$ctr."' value ='" .$row['phone'] ."'></td>";
+        echo "<td>" ."<input type='text' id='skill".$ctr."' name ='skills_".$ctr."' value ='" .$row['skills'] ."'></td>";
+        echo "<td>" ."<input type='text' id='oskill".$ctr."' name ='other_skills_".$ctr."' value ='" .$row['other_skills'] ."'></td>";
+        echo "<td>" ."<input type='text' id='status".$ctr."' name ='status_".$ctr."' value ='" .$row['status'] ."'></td>";
         $ctr++;
     }
     echo "</table>";
@@ -73,7 +73,7 @@ if (mysqli_num_rows($result) > 0) {
 mysqli_close($conn);
 ?>
 <form action="about.php" class="inline">
-    <input type="submit" class='submitbutton button1' value=" Home" />
+    <input type="submit" class='submitbutton button1' value=" Home">
 </form>
 <br><br><br>
 <div class="divider-sm"></div>
