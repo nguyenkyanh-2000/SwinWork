@@ -31,9 +31,9 @@
 
   <!--Form-->
   <section class="apply-form">
-    <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+    <form method="post" action="processEOI.php" novalidate="novalidate">
       <!--Job preference number-->
-      <label for="jpre">Job preference number</label><br />
+      <label for=" jpre">Job preference number</label><br />
       <input type="text" id="jpre" name="jpre" maxlength="5" pattern="[a-zA-Z0-9]+" required /><br /><br />
 
       <!--First name-->
@@ -87,7 +87,7 @@
 
       <!--Email-->
       <label for="email">Email</label><br />
-      <input type="email" id="email" pattern=".+@gmail\.com" required /><br /><br />
+      <input type="email" id="email" name="email" required /><br /><br />
 
       <!--Phone number-->
       <label for="phone">Phone number</label><br />
@@ -95,125 +95,120 @@
 
       <!--Skill-->
 
-      <h4>Your skills</h4>
-
-      <br />
       <label class="checkbox">
         Problem solving
         <div>
-          <input type="checkbox" id="skill1" name="skill1" value="Problem solving" class="checkbox__input" />
-          <span class="checkbox__checkmark"></span>
+            <input type="checkbox" id="skill" name="skills[]" value="Problem solving" class="checkbox__input" />
+            <span class="checkbox__checkmark"></span>
         </div>
       </label>
 
       <label class="checkbox">
         Deep learning
         <div>
-          <input type="checkbox" id="skill2" name="skill2" value="Deep learning" class="checkbox__input" />
-          <span class="checkbox__checkmark"></span>
+            <input type="checkbox" id="skill" name="skills[]" value="Deep learning" class="checkbox__input" />
+            <span class="checkbox__checkmark"></span>
         </div>
-      </label>
+     </label>
 
       <label class="checkbox">
         Critical thinking
         <div>
-          <input type="checkbox" id="skill3" name="skill3" value="Critical thinking" class="checkbox__input" />
-          <span class="checkbox__checkmark"></span>
+            <input type="checkbox" id="skill" name="skills[]" value="Critical thinking" class="checkbox__input" />
+            <span class="checkbox__checkmark"></span>
         </div>
       </label>
 
       <label class="checkbox">
         Data engineering
         <div>
-          <input type="checkbox" id="skill4" name="skill4" value="Data engineering" class="checkbox__input" />
-          <span class="checkbox__checkmark"></span>
+            <input type="checkbox" id="skill" name="skills[]" value="Data engineering" class="checkbox__input" />
+            <span class="checkbox__checkmark"></span>
         </div>
       </label>
 
       <label class="checkbox">
         Machine learning
         <div>
-          <input type="checkbox" id="skill5" name="skill5" value="Machine learning" class="checkbox__input" />
-          <span class="checkbox__checkmark"></span>
+            <input type="checkbox" id="skill" name="skills[]" value="Machine learning" class="checkbox__input" />
+            <span class="checkbox__checkmark"></span>
         </div>
       </label>
 
       <label class="checkbox">
         Communication
         <div>
-          <input type="checkbox" id="skill6" name="skill6" value="Communication" class="checkbox__input" />
-          <span class="checkbox__checkmark"></span>
+            <input type="checkbox" id="skill" name="skills[]" value="Communication" class="checkbox__input" />
+            <span class="checkbox__checkmark"></span>
         </div>
       </label>
 
-      <label class="checkbox">
+     <label class="checkbox">
         Big data analytics
         <div>
-          <input type="checkbox" id="skill7" name="skill7" value="Big data analytics" class="checkbox__input" />
-          <span class="checkbox__checkmark"></span>
+            <input type="checkbox" id="skill" name="skills[]" value="Big data analytics" class="checkbox__input" />
+            <span class="checkbox__checkmark"></span>
         </div>
-      </label>
+     </label>
 
-      <label class="checkbox">
+     <label class="checkbox">
         Neural network architectures
         <div>
-          <input type="checkbox" id="skill8" name="skill8" value="Neural network architectures"
-            class="checkbox__input" />
-          <span class="checkbox__checkmark"></span>
+            <input type="checkbox" id="skill" name="skills[]" value="Neural network architectures" class="checkbox__input" />
+            <span class="checkbox__checkmark"></span>
         </div>
-      </label>
+     </label>
 
-      <label class="checkbox">
+     <label class="checkbox">
         Natural language processing
         <div>
-          <input type="checkbox" id="skill9" name="skill9" value="Natural language processing"
-            class="checkbox__input" />
-          <span class="checkbox__checkmark"></span>
+            <input type="checkbox" id="skill" name="skills[]" value="Natural language processing" class="checkbox__input" />
+            <span class="checkbox__checkmark"></span>
         </div>
-      </label>
+     </label>
 
-      <label class="checkbox">
+     <label class="checkbox">
         Cloud knowledge
         <div>
-          <input type="checkbox" id="skill10" name="skill10" value="Cloud knowledge" class="checkbox__input" />
-          <span class="checkbox__checkmark"></span>
+            <input type="checkbox" id="skill" name="skills[]" value="Cloud knowledge" class="checkbox__input" />
+            <span class="checkbox__checkmark"></span>
         </div>
-      </label>
+     </label>
 
-      <label class="checkbox">
+     <label class="checkbox">
         Teamwork
         <div>
-          <input type="checkbox" id="skill11" name="skill11" value="Teamwork" class="checkbox__input" />
-          <span class="checkbox__checkmark"></span>
+            <input type="checkbox" id="skill" name="skills[]" value="Teamwork" class="checkbox__input" />
+            <span class="checkbox__checkmark"></span>
         </div>
-      </label>
+     </label>
 
-      <label class="checkbox">
+     <label class="checkbox">
         Data visualization
         <div>
-          <input type="checkbox" id="skill12" name="skill12" value="Data visualization" class="checkbox__input" />
-          <span class="checkbox__checkmark"></span>
+            <input type="checkbox" id="skill" name="skills[]" value="Data visualization" class="checkbox__input" />
+            <span class="checkbox__checkmark"></span>
         </div>
-      </label>
+     </label>
 
-      <label class="checkbox">
+     <label class="checkbox">
         Linear algebra and Statistics
         <div>
-          <input type="checkbox" id="skill13" name="skill13" value="Linear algebra and Statistics"
-            class="checkbox__input" />
-          <span class="checkbox__checkmark"></span>
+            <input type="checkbox" id="skill" name="skills[]" value="Linear algebra and Statistics" class="checkbox__input" />
+            <span class="checkbox__checkmark"></span>
         </div>
-      </label>
+     </label>
 
-      <label class="checkbox">
+     <label class="checkbox">
         Other
         <div>
-          <input type="checkbox" id="skill14" name="skill14" value="Other" class="checkbox__input" />
-          <span class="checkbox__checkmark"></span>
+            <input type="checkbox" id="skill" name="skills[]" value="Other" class="checkbox__input" />
+            <span class="checkbox__checkmark"></span>
         </div>
-      </label>
+     </label>
 
-      <input type="text" id="otherskill" name="otherskill" class="resizedTextbox"
+     <label for="other_skills">Other skills</label><br />
+     <input type="text" id="other_skills" name="other_skills" class="resizedTextbox"
         placeholder="Enter your other skill here" />
 
       <!--Apply button-->
