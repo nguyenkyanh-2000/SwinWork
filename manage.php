@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +17,7 @@
 <br>
 
 <!--Search bar-->
-<form method="POST" action="manage.php">
+<form method="POST" action="search.php">
     <label for="query_text">Enter job number or name:</label>
     <input type="text" type="hidden" name="query_text" required>
     <input type="submit" value="Search" class='submitbutton button1' name="search_button"> 
