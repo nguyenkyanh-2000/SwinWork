@@ -13,7 +13,17 @@
 <body>
 <br>
 <h1 class="heading_DB">Database Manager</h1><br>
+<br>
 
+<!--Search bar-->
+<form method="POST" action="manage.php">
+    <label for="query_text">Enter job number or name:</label>
+    <input type="text" type="hidden" name="query_text" required>
+    <input type="submit" value="Search" class='submitbutton button1' name="search_button"> 
+    <input type="submit" value="Delete" class='submitbutton button1' name="delete_button">
+</form>
+<div class="divider-sm"></div>
+<br>
 <!--PHP-->
 <?php
 session_start();
@@ -43,7 +53,7 @@ if (!$conn) {
 $sql = "SELECT EOINumber, job_number, first_name, last_name, gender, birthday, street_address, suburb_town, states, postcode, email, phone, skills, other_skills, status FROM eoi";
 $result = mysqli_query($conn, $sql);
 
-//create table 
+//create table list all EOI
 if (mysqli_num_rows($result) > 0) {
     echo "<form action='edit.php' method='POST' class='inline'>";
     echo "<table id=\"customers\">";
