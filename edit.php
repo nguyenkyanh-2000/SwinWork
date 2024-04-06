@@ -11,7 +11,16 @@ $sql1 = "SELECT EOINumber FROM eoi";
 $result = mysqli_query($conn, $sql1);
 $ctr = 0;
 while($row = mysqli_fetch_assoc($result)) {
-  $sql="UPDATE eoi SET job_number='".$_POST["job_number_".$ctr.""]."'
+  if ($_POST["job_number_".$ctr.""] == 'Frontend Developer' or $_POST["job_number_".$ctr.""] == 'ABC12' ){
+    $jobnums = 'ABC12';
+  }else if ($_POST["job_number_".$ctr.""] == 'Data Analyst' or $_POST["job_number_".$ctr.""] == 'XYZ34' ){
+    $jobnums = 'XYZ34';
+  }else if ($_POST["job_number_".$ctr.""] == 'AI Engineer' or $_POST["job_number_".$ctr.""] == 'AI123' ){
+    $jobnums = 'AI123';
+  }else{
+    $jobnums = 'Invalid';
+  }
+  $sql="UPDATE eoi SET job_number='".$jobnums."'
   , first_name='".$_POST["first_name_".$ctr.""]."'
   , last_name='".$_POST["last_name_".$ctr.""]."'
   , birthday='".$_POST["birthday_".$ctr.""]."'
@@ -24,6 +33,7 @@ while($row = mysqli_fetch_assoc($result)) {
   , phone='".$_POST["phone_".$ctr.""]."'
   , skills='".$_POST["skills_".$ctr.""]."'
   , other_skills='".$_POST["other_skills_".$ctr.""]."'
+  , status='".$_POST["status_".$ctr.""]."'
 
   WHERE EOINumber='".$_POST["id_".$ctr.""]."'";
 
@@ -35,9 +45,5 @@ if (mysqli_query($conn, $sql)) {
 $ctr++;
 }
 mysqli_close($conn);
-
+//(●っゝω・)っ～☆HELLO☆
 ?>
-
-#(●っゝω・)っ～☆HELLO☆
-
-
