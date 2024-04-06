@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--Head-->
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,12 +9,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
     rel="stylesheet" />
-
-  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
 
   <title>SwinWork | Login</title>
+  <!--Body-->
+  <body class="layout login">
+  <?php
+   include("config.php");
+   session_start();
+   $error='';
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+   
+      // username and password sent from form 
+      $myusername = mysqli_real_escape_string($db,$_POST['username']);
+      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
 
-<body class="layout login">
+      $sql = "SELECT * FROM admin WHERE username = '$myusername' and password = '$mypassword'";
+
+      $result = mysqli_query($db,$sql);      
+      $row = mysqli_num_rows($result);      
+      $count = mysqli_num_rows($result);
+
+      if($count == 1) {
+	  
+         // session_register("myusername");
+         $_SESSION['login_user'] = $myusername;
+         header("location: manage.php");
+      } else {
+         $error = "Your Login Name or Password is invalid";
+      }
+   }
+?>
   <form class="login-form" action="#" method="POST">
     <h1 class="login-form__title">SwinWORK</h1>
 
@@ -39,5 +63,7 @@
   </form>
 </body>
 </head>
-
 </html>
+<!--
+(●っゝω・)っ～☆HELLO☆
+-->
