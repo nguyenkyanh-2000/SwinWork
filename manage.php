@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!--Head-->
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="table.css?v=<?php echo time(); ?>">
+   <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
 <title>HR Database Manager | SwinWORK</title>
 </head>
+
+<!--Body-->
 <body>
 <br>
 <h1 class="heading_DB">Database Manager</h1><br>
+
+<!--PHP-->
+<?php
+session_start();
+if(!isset($_SESSION['login_user'])){
+   header("Location:login.php");
+}
+?>
 <?php
 require_once ("settings.php");
+
 // Create connection
 $conn =  @mysqli_connect($host, $user, $pwd, $sql_db);
 
@@ -19,10 +32,11 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }   
 
+//read the database
 $sql = "SELECT EOINumber, job_number, first_name, last_name, gender, birthday, street_address, suburb_town, states, postcode, email, phone, skills, other_skills, status FROM eoi";
 $result = mysqli_query($conn, $sql);
 
-
+//create table 
 if (mysqli_num_rows($result) > 0) {
     echo "<form action='edit.php' method='POST' class='inline'>";
     echo "<table id=\"customers\">";
@@ -43,7 +57,7 @@ if (mysqli_num_rows($result) > 0) {
     ."<th scope=\"col\">Other skills</th>" 
     ."<th scope=\"col\">Status</th>" 
     ."</tr>";
-    $ctr = 0;
+    $ctr = 0; // create a loop so each row has each different id 
     while($row = mysqli_fetch_assoc($result)) {
         echo "<tr>";
         echo "<td>" ."<input type='number' id='id".$ctr."' name ='id_".$ctr."' value ='" .$row['EOINumber']."'></td>";
@@ -79,8 +93,9 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 mysqli_close($conn);
+
 ?>
-<form action="about.php" class="inline">
+<form action="index.php" class="inline">
     <input type="submit" class='submitbutton button1' value=" Home">
 </form>
 <br><br><br>
