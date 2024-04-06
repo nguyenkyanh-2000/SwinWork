@@ -1306,26 +1306,29 @@ div.container {
 }
 
 /*HR*/
-input[type=text], input[type=number], input[type=date], input[type=email], input[type=phone] {
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"],
+input[type="phone"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   font-size: 15px;
   display: inline-block;
-  background-color:  white;
+  background-color: white;
   border: none;
   outline: none;
   box-sizing: border-box;
 }
 
-
-.heading_DB{
+.heading_DB {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   border-collapse: collapse;
   width: 100%;
 }
-.heading_SC{
+.heading_SC {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
@@ -1350,7 +1353,7 @@ input[type=text], input[type=number], input[type=date], input[type=email], input
   margin: 59vh 73vh;
   transition-duration: 0.5s;
   cursor: pointer;
-} 
+}
 .submitbutton {
   border: none;
   border-radius: 15px;
@@ -1371,51 +1374,56 @@ input[type=text], input[type=number], input[type=date], input[type=email], input
 }
 
 .button1:hover {
-  background-color: white; 
-  color: black; 
+  background-color: white;
+  color: black;
   border: 1px solid #434343;
 }
 
-
 .inline {
-  display:inline;
+  display: inline;
 }
 
 #customers {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  #customers td, #customers th {
-    text-align: center;
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  
-  #customers tr:hover {background-color: #ddd;}
-  
-  #customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: 5px;
-    background-color: #434343;
-    color: white;
-  }
-  input[type=text], input[type=number], input[type=date], input[type=email], input[type=phone] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    font-size: 15px;
-    display: inline-block;
-    background-color:  white;
-    border: none;
-    outline: none;
-    box-sizing: border-box;
-  }
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-  
-  
+#customers td,
+#customers th {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
 
-  
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: 5px;
+  background-color: #434343;
+  color: white;
+}
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"],
+input[type="phone"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: 15px;
+  display: inline-block;
+  background-color: white;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* HACKS */
+#username {
+  border: 2px solid var(--border);
+}
