@@ -17,11 +17,18 @@
 <!--PHP-->
 <?php
 session_start();
+//Check if user has login
 if(!isset($_SESSION['login_user'])){
    header("Location:login.php");
 }
-?>
-<?php
+//expire after 15 minutes activity and go back to login page
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 900)) {
+    unset($_SESSION['login_user']); 
+}
+$_SESSION['LAST_ACTIVITY'] = time();
+
+
+//TABLE PHP
 require_once ("settings.php");
 
 // Create connection
@@ -95,7 +102,7 @@ if (mysqli_num_rows($result) > 0) {
 mysqli_close($conn);
 
 ?>
-<form action="index.php" class="inline">
+<form action="about.php" class="inline">
     <input type="submit" class='submitbutton button1' value=" Home">
 </form>
 <br><br><br>
