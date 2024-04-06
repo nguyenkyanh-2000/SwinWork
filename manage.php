@@ -47,7 +47,15 @@ if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
         echo "<tr>";
         echo "<td>" ."<input type='number' id='id".$ctr."' name ='id_".$ctr."' value ='" .$row['EOINumber']."'></td>";
-        echo "<td>" ."<input type='number' id='jnumber".$ctr."' name ='job_number_".$ctr."' value ='" .$row['job_number'] ."'></td>";
+        if ($row['job_number'] == 'ABC12'){
+            echo "<td>" ."<input type='text' id='jnumber".$ctr."' name ='job_number_".$ctr."' value ='Frontend Developer'></td>";
+        } else if ($row['job_number'] == 'XYZ34'){
+            echo "<td>" ."<input type='text' id='jnumber".$ctr."' name ='job_number_".$ctr."' value ='Data Analyst'></td>";
+        } else if ($row['job_number'] == 'AI123'){
+            echo "<td>" ."<input type='text' id='jnumber".$ctr."' name ='job_number_".$ctr."' value =' AI Engineer'></td>";
+        } else{
+            echo "<td>" ."<input type='text' id='jnumber".$ctr."' name ='job_number_".$ctr."' value ='Invalid'></td>";
+        }
         echo "<td>" ."<input type='text' id='fname".$ctr."' name ='first_name_".$ctr."' value ='" .$row['first_name'] ."'></td>";
         echo "<td>" ."<input type='text' id='lname".$ctr."' name ='last_name_".$ctr."' value ='" .$row['last_name'] ."'></td>";
         echo "<td>" ."<input type='date' id='birth".$ctr."' name ='birthday_".$ctr."' value ='" .$row['birthday'] ."'></td>";
