@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +22,9 @@
     <input type="text" name="query_text" class="search_bar" required>
     <input type="submit" value="Search" class='submitbutton button1' name="search_button"> 
     <input type="submit" value="Delete" class='submitbutton button1' name="delete_button">
+</form>
+<form action="manage.php" class="inline">
+    <input type="submit" value="View all" class='submitbutton button1' name="back_to_manage"> 
 </form>
 <div class="divider-sm"></div>
 <br>
