@@ -113,7 +113,7 @@ if (mysqli_num_rows($result) > 0) {
 mysqli_close($conn);
 
 ?>
-<form action="about.php" class="inline">
+<form action="index.php" class="inline">
     <input type="submit" class='submitbutton button1' value=" Home">
 </form>
 <br><br><br>

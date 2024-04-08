@@ -31,12 +31,19 @@
         return $data;
     }
 
+    // Server-side validation
+    $errors = [];
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Validate and sanitize form data
         $jobReferenceNumber = clean_input($_POST['jpre']);
         $firstName = clean_input($_POST['fname']);
         $lastName = clean_input($_POST['lname']);
-        $birthday = date('Y-m-d', strtotime($_POST['bday']));
+        if (empty($_POST['bday'])) {
+            $errors[] = "Birthday field is empty";
+        } else {
+            $birthday = date('Y-m-d', strtotime($_POST['bday']));
+        }
         $gender = $_POST['gender'];
         $streetAddress = clean_input($_POST['st-address']);
         $suburbTown = clean_input($_POST['su-to']);
@@ -51,8 +58,7 @@
         $otherSkills = isset($_POST['other_skills']) ? $_POST['other_skills'] : "None";
         $status = 'New';
 
-        // Server-side validation
-        $errors = [];
+      
 
         // Validate job reference number
         if (!preg_match("/^[a-zA-Z0-9]{5}$/", $jobReferenceNumber)) {
@@ -86,6 +92,21 @@
         }
 
 
+        // Validate gender
+        $validGenders = array("Male", "Female");
+        if (!in_array($gender, $validGenders)) {
+            $errors[] = "Invalid gender.";
+        }
+
+        // Validate birthday
+
+
+        $today = date('Y-m-d');
+        $minDate = '1900-01-01';
+    
+        if ($birthday < $minDate || $birthday > $today) {
+            $errors[] = "Invalid birthday";
+        } 
 
         // Validate email address format
         if (!filter_var($emailAddress, FILTER_VALIDATE_EMAIL)) {
@@ -100,7 +121,7 @@
 
         if (!empty($errors)) {
             foreach ($errors as $error) {
-                echo "<p>Error: $error</p>";
+                echo "<p class=\"confirmation-message\">Error: $error</p>";
             }
         } else {
 
@@ -128,7 +149,8 @@
                 echo "<p class=\"confirmation-message\">Expression of Interest submitted successfully. Your EOInumber is: $last_id.</p>";
 
             } else {
-                echo "Error: " . $sql . "<br>" . $conn->error;
+                echo "<p class=\"confirmation-message\">$sql</p>";
+                echo "<p class=\"confirmation-message\">$conn->error</p>";
             }
 
             $conn->close();

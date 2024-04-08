@@ -7,12 +7,15 @@
 <title>SUCCESS</title>
 </head>
 <body>
+
+<?php include 'navbar-solid.inc'; ?>
     <h1 class="heading_SC">Database Updated Successfully</h1>
     <form action="manage.php">
         <input type="submit" class="SCbutton button1" value="Back to database">
     </form>
 <div class="divider-sm"></div>
-<footer class="footer">
+
+<?php include 'footer.inc'; ?>
   <div class="footer__addr">
     <h1 class="logo">SwinWORK</h1>
   </div>
