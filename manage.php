@@ -18,7 +18,7 @@
 
 <!--Search bar-->
 <form method="POST" action="search.php">
-    <label for="query_text">Enter job number or name:</label>
+    <label for="query_text">Enter job number:</label>
     <input type="text" type="hidden" name="query_text" required>
     <input type="submit" value="Search" class='submitbutton button1' name="search_button"> 
     <input type="submit" value="Delete" class='submitbutton button1' name="delete_button">
@@ -78,7 +78,7 @@ if (mysqli_num_rows($result) > 0) {
     $ctr = 0; // create a loop so each row has each different id 
     while($row = mysqli_fetch_assoc($result)) {
         echo "<tr>";
-        echo "<td>" ."<input type='number' id='id".$ctr."' name ='id_".$ctr."' value ='" .$row['EOINumber']."'></td>";
+        echo "<td>" ."<input type='number' readonly id='id".$ctr."' name ='id_".$ctr."' value ='" .$row['EOINumber']."'></td>";
         if ($row['job_number'] == 'ABC12'){
             echo "<td>" ."<input type='text' id='jnumber".$ctr."' name ='job_number_".$ctr."' value ='Frontend Developer'></td>";
         } else if ($row['job_number'] == 'XYZ34'){
