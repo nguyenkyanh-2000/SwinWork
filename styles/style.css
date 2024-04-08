@@ -1425,5 +1425,9 @@ input[type="phone"] {
 
 /* HACKS */
 #username {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 15px;
   border: 2px solid var(--border);
+  border-radius: 5px;
 }
